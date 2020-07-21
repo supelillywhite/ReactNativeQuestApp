@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: blogposts
+#
+#  id         :integer          not null, primary key
+#  title      :string
+#  content    :text
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 require 'rails_helper'
 
 RSpec.describe Blogpost, type: :model do

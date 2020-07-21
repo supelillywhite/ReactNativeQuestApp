@@ -1,18 +1,19 @@
 # == Schema Information
 #
-# Table name: quests
+# Table name: gears
 #
 #  id          :integer          not null, primary key
-#  title       :string
+#  quest_id    :integer
+#  name        :string
 #  description :text
-#  location    :text
+#  price       :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
 FactoryBot.define do
-  factory :quest do
-    title { "MyString" }
+  factory :gear do
+    name { "MyString" }
     description { "MyText" }
-    location { "MyText" }
+    price { 1 }
   end
 end
