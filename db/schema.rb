@@ -10,13 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200717163708) do
+ActiveRecord::Schema.define(version: 20200721195749) do
 
   create_table "blogposts", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "gears", force: :cascade do |t|
+    t.integer  "quest_id"
+    t.string   "name"
+    t.text     "description"
+    t.integer  "price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["quest_id"], name: "index_gears_on_quest_id"
   end
 
   create_table "notes", force: :cascade do |t|
